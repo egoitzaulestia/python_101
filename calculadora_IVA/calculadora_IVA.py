@@ -25,7 +25,16 @@
 
 #Código del programa de la Calculadora IVA
 print("Calculadora IVA") #Imprimimos título
-amount = float(input("(intoduce) Precio sin IVA: "))
-print(f"{amount} €")
-tax = float(input("(introduce) Porcenta del IVA"))
-print(f"{tax}")
+precio_sin_iva = float(input("(intoduce) Precio sin IVA: "))
+#print(f"{amount} €")
+iva_percentage = float(input("(introduce) Porcenta del IVA: "))
+#print(f"{tax} %")
+iva_total = precio_sin_iva * (iva_percentage / 100)
+precio_total = precio_sin_iva + iva_total
+print()
+print(f"Precio sin IVA: {precio_sin_iva:.2f} €")
+print(f"IVA: {iva_total:.2f} €")
+print(f"Precio con IVA: {precio_total:.2f} €")
+#iva_total = amount * (iva_percentage / 100)
+
+
