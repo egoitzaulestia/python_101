@@ -21,7 +21,7 @@ print("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ //////////////////////")
 print()
 print("Bienvenido a la calculafora IVA del Santander | Impulsa Empresa.")
 print()
-choice = input("Si quiere sumar el IVA a un precio escriba ""\033[1m" + "\"sumar\"" + "\033[0m" + "\nSi quiere restar el IVA a un precio escriba ""\033[1m" + " \"restar\"" + "\033[0m" + "\n")
+choice = input("Si quiere sumar el IVA a un precio escriba ""\033[1m" + "\"sumar\"" + "\033[0m" + "\nSi quiere restar el IVA a un precio escriba ""\033[1m" + " \"restar\"" + "\033[0m" + "\nsumar")
 print()
 if choice == "sumar" or choice == "Sumar" or choice == "SUMAR":
     precio_sin_iva = float(input("///// (introduce) Precio sin IVA: "))
