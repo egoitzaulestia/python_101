@@ -17,12 +17,13 @@ ___
 
 ## Pruebas del prototipo realizadas
 El orden de los datos de input: 
-  + Sumar IVA (precio sin IVA, porcentaje de IVA del precio sin IVA), Restar IVA (precio con IVA, porcentaje de IVA del precio con IVA).
+  + Sumar IVA (precio sin IVA + porcentaje de IVA del precio sin IVA), Restar IVA (precio con IVA - porcentaje de IVA del precio con IVA).
 
 
-|  Tests |  Input |  Expected Output |  Actaul Output | PASS / FAIL  |
+|  Tests   |  Input                            |  Expected Output |  Actaul Output | PASS / FAIL  |
 |---|---|---|---|---|
-|  Test 1  |  sumar (100, 21)                     |  121 €           |  121 €           |  PASS  |
-|  Test 2  |  sumar (100, 21) , restar (100, 21)  |  121 €, 17.36 €  |  121 €, 44.59 €  |  FAIL  |
-|  Test 3  |   |   |   |   |
-
+|  Test 1  |  (100€ + 21%)                     |  121€            |  121 €         |  PASS        |
+|  Test 2  |  (100€ + 21%) , restar (100, 21)  |  121€, 17.36€    |  121€, 44.59€  |  FAIL        |
+|  Test 3  |  (100€ + 21%) , restar (100, 21)  |  121€, 17.36€    |  121€, 62.32€  |  FAIL        |
+|  Test 4  |  (100€ + 21%) , restar (100, 21)  |  121€, 17.36€    |  121€, 17.36€  |  PASS        |
+|  Test 5  |  (250€ + 10%) , restar (100, 21)  |  275€, 22.73€    |  275€, 22.73€  |  PASS        |
