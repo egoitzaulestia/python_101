@@ -1,5 +1,6 @@
-# Prototipo aplicación "Calculadora IVA" para el Banco Santander.
-  Con este prototipo el usuario podrá calcular el precio del IVA que se le añadirá a un producto sin IVA y dispondra de la opción para calcular el precio del IVA incluido en un precio. 
+# Prototipo aplicación "Calculadora IVA" para el Banco Santander
+---
+Prototipo para facilitar al usuario la posibilidad de sumar el precio del IVA a un precio sin IVA y restar el precio del IVA a un precio con IVA. 
 
 ---
 
@@ -15,12 +16,12 @@
 ___
 
 ## Pruebas del prototipo realizadas
-El orden de los datos de input/output es: 
-  + precio sin IVA, porcentaje de IVA del precio sin IVA; precio con IVA, porcentaje de IVA del precio con IVA.
+El orden de los datos de input: 
+  + Sumar IVA (precio sin IVA, porcentaje de IVA del precio sin IVA), Restar IVA (precio con IVA, porcentaje de IVA del precio con IVA).
 
 
 |  Tests |  Input |  Expected Output |  Actaul Output | PASS / FAIL  |
 |---|---|---|---|---|
-|  Test 1 |   |   |   |   |
+|  Test 1 |Sumar (100, 21)   | 121  | 121  | PASS  |
 |  Test 2 |   |   |   |   |
 |  Test 3 |   |   |   |   |
