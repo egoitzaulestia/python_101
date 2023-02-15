@@ -22,7 +22,7 @@ El orden de los datos de input:
 
 |  Tests |  Input |  Expected Output |  Actaul Output | PASS / FAIL  |
 |---|---|---|---|---|
-|  Test 1  |  sumar (100, 21)                     |  121 €  |  121  |  PASS  |
-|  Test 2  |  sumar (100, 21) , restar (100, 21)  |  121 €,   |   |   |
+|  Test 1  |  sumar (100, 21)                     |  121 €           |  121 €           |  PASS  |
+|  Test 2  |  sumar (100, 21) , restar (100, 21)  |  121 €, 17.36 €  |  121 €, 44.59 €  |  FAIL  |
 |  Test 3  |   |   |   |   |
 
