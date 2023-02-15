@@ -10,7 +10,9 @@
      + Para ello facilitar al usuario:  #
        - Introducir precio toral con IVA
        - Introducir porcentaje del IVA que lleva el producto
+___
 
+# Pruebas del prototipo realizadas
 |  Tests |  Input |  Expected Output |  Actaul Output | PASS / FAIL  |
 |---|---|---|---|---|
 |  Test 1 |   |   |   |   |
