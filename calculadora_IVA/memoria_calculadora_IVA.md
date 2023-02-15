@@ -19,7 +19,13 @@ ___
 El orden de los datos de input: 
   + Sumar IVA (precio sin IVA + porcentaje de IVA del precio sin IVA), Restar IVA (precio con IVA - porcentaje de IVA del precio con IVA).
 
+El orden de los datos del output esperado:
+  + Suma (Precion con IVA), Resta (Precio sin IVA)
 
+El orden de los datos del output actual:
+  + Suma (Precion con IVA), Resta (Precio sin IVA) 
+
+---
 |  Tests   |  Input                          |  Expected Output   |  Actaul Output   |  PASS / FAIL |
 |  ---     |  ---                            |  ---               |  ---             |  ---         |
 |  Test 1  |  (100€  + 21%) , -              |  121€  , -         |  121€  , -       |  PASS        |
