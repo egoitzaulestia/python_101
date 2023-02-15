@@ -19,33 +19,36 @@ print("////////////////////// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\")
 print("///// ""\033[1m" + "         Calculadora IVA         " + "\033[0m" " \\\\\\\\\\")
 print("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ //////////////////////")
 print()
-print("Bienvenido a la calculafora IVA del Santander | Impulsa Empresa.")
+print("Bienvenido a la calculafora IVA del Santander | Impulsa Empresa.") #Saludo de vienvenida al usuario
 print()
-choice = input("Si quiere sumar el IVA a un precio escriba ""\033[1m" + "\"sumar\"" + "\033[0m" + "\nSi quiere restar el IVA a un precio escriba ""\033[1m" + " \"restar\"" + "\033[0m" + "\nsumar")
+
+#la variable "choice" almacena si el usuario quiere sumar o restar el iva a un precio
+choice = input("Si quiere sumar el IVA a un precio escriba ""\033[1m" + "\"sumar\"" + "\033[0m" + "\nSi quiere restar el IVA a un precio escriba ""\033[1m" + " \"restar\"" + "\033[0m" + "\n")
 print()
-if choice == "sumar" or choice == "Sumar" or choice == "SUMAR":
-    precio_sin_iva = float(input("///// (introduce) Precio sin IVA: "))
-    iva_percentage = float(input("///// (introduce) Porcenta de IVA: "))
-    iva_total = precio_sin_iva * (iva_percentage / 100)
-    precio_total = precio_sin_iva + iva_total
+
+if choice == "sumar" or choice == "Sumar" or choice == "SUMAR": #Si el usuario quiere sumar elIVA entrará en el "if"
+    precio_sin_iva = float(input("///// (introduce) Precio sin IVA: ")) #Recogemos a través un input el precio sin IVA en la variable "precio_sin_iva"
+    iva_percentage = float(input("///// (introduce) Porcenta de IVA: ")) #Recogemos a través de un input el porcentaje de IVA en la variable "iva_percentage"
+    iva_total = precio_sin_iva * (iva_percentage / 100) #La variable "iva_total" recoge la fórmula para calcular el precio del IVA
+    precio_total = precio_sin_iva + iva_total #La variable "precio_total" guarda el valor total del precio con IVA
     print()
-    print(f"Porcentage de IVA seleccionado: {iva_percentage} %")
-    print(f"Precio sin IVA: {precio_sin_iva:.2f} €")
-    print(f"IVA: {iva_total:.2f} €")
-    print(f"Precio con IVA: {precio_total:.2f} €")
-elif choice == "restar" or choice == "Restar" or choice == "RESTAR":
-    precio_total = float(input("///// (introduce) Precio con IVA: "))
-    iva_percentage = float(input("///// (introduce) Porcenta de IVA: "))
-    superporcentaje_iva = (iva_percentage + 100) 
-    iva_total = (precio_total * iva_percentage) / superporcentaje_iva
-    precio_sin_iva = precio_total - iva_total
+    print(f"Porcentage de IVA seleccionado: {iva_percentage} %") #Mostramos porcentaje de IVA introducido
+    print(f"Precio sin IVA: {precio_sin_iva:.2f} €") #Mostramos el precio sin IVA en euros
+    print(f"IVA: {iva_total:.2f} €") #Mostramos el precio del IVA en euros
+    print(f"Precio con IVA: {precio_total:.2f} €") #Mostramos el precio con IVA en euros 
+elif choice == "restar" or choice == "Restar" or choice == "RESTAR": #Si el usuario quiere restar el IVA entrará en el "if"
+    precio_total = float(input("///// (introduce) Precio con IVA: ")) #Recogemos a través un input el precio con IVA en la variable "precio_total"
+    iva_percentage = float(input("///// (introduce) Porcenta de IVA: ")) #Recogemos a través de un input el porcentaje de IVA en la variable "iva_percentage"
+    superporcentaje_iva = (iva_percentage + 100) #La variable "superporcentaje_iva" guarda el valor la suma entre el porcentaje de IVA introducido y 100(%) 
+    iva_total = (precio_total * iva_percentage) / superporcentaje_iva #La variable "iva_total" recoge la fórmula oara crear la resta del IVA a un precio con IVA
+    precio_sin_iva = precio_total - iva_total #Introducimos el valor del precio sin IVA en la variable "precio_sin_iva" 
     print()
-    print(f"Porcentage de IVA seleccionado: {iva_percentage} %")
-    print(f"Precio sin IVA: {precio_sin_iva:.2f} €")
-    print(f"IVA: {iva_total:.2f} €")
-    print(f"Precio con IVA: {precio_total:.2f} €")
-else:
+    print(f"Porcentage de IVA seleccionado: {iva_percentage} %") #Mostramos porcentaje de IVA introducido
+    print(f"Precio sin IVA: {precio_sin_iva:.2f} €") #Mostramos el precio sin IVA en euros
+    print(f"IVA: {iva_total:.2f} €") #Mostramos el precio del IVA en euros
+    print(f"Precio con IVA: {precio_total:.2f} €") #Mostramos el precio con IVA en euros
+else: #Si el usuario no introduce la palabra sumar/Sumar/SUMAR o restar/Restar/RESTAR entrara en else y le comunicará que el programa ha tenido un error
     print("\033[1m" + "¡ERROR!" + "\033[0m")
     print("Lo sentimos, no ha introducido las palabras correctas.")
     print("Reinicie el programa, por favor.")
-print()
+print() #FIN del programa
