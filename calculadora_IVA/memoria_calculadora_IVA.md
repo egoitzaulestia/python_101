@@ -20,10 +20,11 @@ El orden de los datos de input:
   + Sumar IVA (precio sin IVA + porcentaje de IVA del precio sin IVA), Restar IVA (precio con IVA - porcentaje de IVA del precio con IVA).
 
 
-|  Tests   |  Input                            |  Expected Output |  Actaul Output | PASS / FAIL  |
-|---|---|---|---|---|
-|  Test 1  |  (100€ + 21%)                     |  121€            |  121 €         |  PASS        |
-|  Test 2  |  (100€ + 21%) , restar (100, 21)  |  121€, 17.36€    |  121€, 44.59€  |  FAIL        |
-|  Test 3  |  (100€ + 21%) , restar (100, 21)  |  121€, 17.36€    |  121€, 62.32€  |  FAIL        |
-|  Test 4  |  (100€ + 21%) , restar (100, 21)  |  121€, 17.36€    |  121€, 17.36€  |  PASS        |
-|  Test 5  |  (250€ + 10%) , restar (100, 21)  |  275€, 22.73€    |  275€, 22.73€  |  PASS        |
+|  Tests   |  Input                          |  Expected Output   |  Actaul Output   |  PASS / FAIL |
+|  ---     |  ---                            |  ---               |  ---             |  ---         |
+|  Test 1  |  (100€  + 21%) , -              |  121€  , -         |  121€  , -       |  PASS        |
+|  Test 2  |  (100€  + 21%) , (100€  - 21%)  |  121€  , 17.36€    |  121€  , 44.59€  |  FAIL        |
+|  Test 3  |  (100€  + 21%) , (100€  - 21%)  |  121€  , 17.36€    |  121€  , 62.32€  |  FAIL        |
+|  Test 4  |  (100€  + 21%) , (100€  - 21%)  |  121€  , 17.36€    |  121€  , 17.36€  |  PASS        |
+|  Test 5  |  (250€  + 10%) , (250€  - 10%)  |  275€  , 22.73€    |  275€  , 22.73€  |  PASS        |
+|  Test 6  |  (9.95€ +  4%) , (3.41€ -  4%)  |  10.35€,  0.13€    |  10.35€,  0.13€  |  PASS        |
