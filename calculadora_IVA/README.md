@@ -7,8 +7,8 @@ Prototipo para facilitar al usuario la posibilidad de sumar el precio del IVA a 
 ## El prototipo deberá facilitar al usuario:
    ### 1 _ Calcular la suma del IVA a un precio que no lleva IVA.
      + Para ello facilitar al usuario: 
-       - Introduccir precio sin IVA
-       - Intrudición del porcentaje de IVA
+       - Introducir precio sin IVA
+       - Introducir del porcentaje de IVA
    ### 2 _ Calcular la resta del iva a un precio que incluye iva.
      + Para ello facilitar al usuario: 
        - Introducir precio toral con IVA
