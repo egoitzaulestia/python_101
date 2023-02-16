@@ -46,6 +46,9 @@
 
 # print(content)
 
+#################
+### PARA APIs ###
+#################
 import requests #Uses urllib3
 
 # currency = "eur"
