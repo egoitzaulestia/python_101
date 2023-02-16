@@ -48,12 +48,33 @@
 
 import requests #Uses urllib3
 
-currency = "eur"
-basecurrency = "aud"
+# currency = "eur"
+# basecurrency = "aud"
 
-url = "http://freecurrencyrates.com/api/action.php?do=cvals&iso=" + currency + "&f=" + basecurrency + "&v=1&s=cbr"
+# url = "http://freecurrencyrates.com/api/action.php?do=cvals&iso=" + currency + "&f=" + basecurrency + "&v=1&s=cbr"
+# resp = requests.get(url)
 
+# print(resp.text)
+# print(resp.json())
+
+url = "https://jsonplaceholder.typicode.com/users"
 resp = requests.get(url)
 
 print(resp.text)
 print(resp.json())
+
+
+# import uuid
+# print ("El UUId uuid1() es : ", end = "")
+# print(uuid.uuid1())
+
+# import turtle
+
+# myTurtle = turtle.Turtle()
+# myWin = turtle.Screen()
+
+# for i in range(4):
+#     myTurtle.forward(20)
+#     myTurtle.right(90)
+
+# myWin.exitonclick()
