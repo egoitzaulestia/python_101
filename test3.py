@@ -131,22 +131,22 @@
 # #Actividades básicas
 
 # #Crear una "lista" para gestionar tu compra.
-compras = ["plátanos", "manzanas", "leche"]
+# compras = ["plátanos", "manzanas", "leche"]
 
-compras.append("galletas")
-compras.append("zumo")
-print("Lista de la compra:")
-for producto in compras:
-    print(f"{producto}")
-print(compras[1:3])
-print(compras[-2:])
-compras[4] = "zumo de naranja"
-compras.pop()
-compras.insert(2, "limones")
-compras.sort()
-print("Lista de la compra ordenada alfabéticamente:")
-for producto in compras:
-    print(f"{producto}")
+# compras.append("galletas")
+# compras.append("zumo")
+# print("Lista de la compra:")
+# for producto in compras:
+#     print(f"{producto}")
+# print(compras[1:3])
+# print(compras[-2:])
+# compras[4] = "zumo de naranja"
+# compras.pop()
+# compras.insert(2, "limones")
+# compras.sort()
+# print("Lista de la compra ordenada alfabéticamente:")
+# for producto in compras:
+#     print(f"{producto}")
 
 
 #Crear un tuple controlar las estaciones del año.
