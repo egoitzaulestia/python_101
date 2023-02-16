@@ -39,12 +39,12 @@
 
 #Bibliotecas útiles y divertidas
 
-from urllib.request import urlopen
+# from urllib.request import urlopen
 
-page = urlopen("http://info.cern.ch/")
-content = page.read()
+# page = urlopen("http://info.cern.ch/")
+# content = page.read()
 
-print(content)
+# print(content)
 
 import requests #Uses urllib3
 
@@ -53,7 +53,7 @@ basecurrency = "aud"
 
 url = "http://freecurrencyrates.com/api/action.php?do=cvals&iso=" + currency + "&f=" + basecurrency + "&v=1&s=cbr"
 
-resp = request.get(url)
+resp = requests.get(url)
 
 print(resp.text)
 print(resp.json())
