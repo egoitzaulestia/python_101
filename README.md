@@ -1,2 +1,2 @@
 # python_101
-Hacemos un cambio
+En este repositorio guardo los ejercios del curso de Python
