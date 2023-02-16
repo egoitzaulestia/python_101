@@ -175,9 +175,8 @@
 notas = [6, 4, 1, 10, 10, 7, 4]
 notas.sort()
 print(notas)
-for i in notas:
-    suma =+ i
-    media = suma
+suma = sum(notas)
+media = suma / len(notas)
 print(suma)
 print(media)
 print(f"La nota media de clase es {media}")
