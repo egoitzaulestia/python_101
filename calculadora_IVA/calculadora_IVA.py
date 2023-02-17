@@ -1,7 +1,7 @@
 #Prototipo de la aplicación "Calculadora IVA" 
 #realizado para el Banco Santander.
 
-#El prototipo debe de falitar al usuario:
+#El prototipo debe de facilitar al usuario:
 #   1 _ Calcular la suma del IVA a un precio que no lleva IVA.
 #     + Para ello facilitar al usuario: 
 #       - Introduccir precio sin IVA
