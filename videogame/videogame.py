@@ -1,7 +1,7 @@
 # EJERCIO DE CLASE PYTHON 
 # TEMA: while 
 
-# Historia de Usuario (número 4)
+# Historia de Usuario
 
 # COMO un programador de videojuegos,
 # QUIERO desarrollar un programa para
@@ -54,7 +54,7 @@ print()
 
 ai = randint(1, 10) # El programa genera un número random.
 i = 1 # Variable que contiene el contador de intentos.
-
+i_res = 5
 # print(ai) # print creado para pruebas de testeo. Nos dice el numero random.
 
 # Informamos al usuario que tiene 5 intentos antes de que el programa "piense" en otro número
@@ -67,10 +67,12 @@ user_num = int(input("Introduce un número del 1 al 10: ")) # Le preguntamos al 
 # Esas condiciones pueden ser:
 # a) Que el usuario acierte el número que el programa ha creado
 # b) que el juagador decida salir.
+
 while ai != user_num:
     print()
+    i_res -= 1
     # A continuación creamos un input para que el/la usuari@ introduzca un nuevo numero mediante un nuevo intento
-    user_num = int(input(f"UA-JA-JA-JAA!\nHas Fallado!!!\nLlevas {i} intento/s\nIntroduce otro número del 1 al 10: "))
+    user_num = int(input(f"UA-JA-JA-JAA!\nHas Fallado!!!\nLlevas {i} intento/s\nTe falta/n {i_res} intento/s\nIntroduce otro número del 1 al 10: "))
     # Si el usuario no ha acertado en 5 intentos el programa entra al "if".
     if i == 4:
         print()
