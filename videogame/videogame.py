@@ -11,6 +11,9 @@
 # - crear un input para que el usuario meta un número
 # - importar el módulo random o la función randint
 
+# REGLAS DEL JUEGO
+# El juego es sencillo, el jugador debe de acertar el número que el programa "está pensando" (ha generado)
+
 # Importamos la función randint() del módulo random bult-in de Python
 # La función randint(x, y) nos dara un numero integro aleatorio entre 2 parámetro
 from random import randint 
