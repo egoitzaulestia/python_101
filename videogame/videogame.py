@@ -1,7 +1,7 @@
 # EJERCIO DE CLASE PYTHON 
 # TEMA: while 
 
-# Historia de Usuario
+# Historia de Usuario (número 4)
 
 # COMO un programador de videojuegos,
 # QUIERO desarrollar un programa para
