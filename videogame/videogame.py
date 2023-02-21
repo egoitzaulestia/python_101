@@ -54,7 +54,7 @@ print()
 
 ai = randint(1, 10) # El programa genera un número random.
 i = 1 # Variable que contiene el contador de intentos.
-i_res = 5
+i_res = 5 # Variable que contiene el contador de intentos restantes.
 # print(ai) # print creado para pruebas de testeo. Nos dice el numero random.
 
 # Informamos al usuario que tiene 5 intentos antes de que el programa "piense" en otro número
@@ -70,7 +70,7 @@ user_num = int(input("Introduce un número del 1 al 10: ")) # Le preguntamos al 
 
 while ai != user_num:
     print()
-    i_res -= 1
+    i_res -= 1 # Restamos un intento a la variable.
     # A continuación creamos un input para que el/la usuari@ introduzca un nuevo numero mediante un nuevo intento
     user_num = int(input(f"UA-JA-JA-JAA!\nHas Fallado!!!\nLlevas {i} intento/s\nTe falta/n {i_res} intento/s\nIntroduce otro número del 1 al 10: "))
     # Si el usuario no ha acertado en 5 intentos el programa entra al "if".
