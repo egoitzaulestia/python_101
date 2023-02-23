@@ -1,30 +1,30 @@
-# s = "    122,Python,es,64,un,777,lenguaje,222,de,55,66,programación  "
+s = "    122,Python,es,64,un,777,lenguaje,222,de,55,66,programación  "
 
-# # lstrip() para quitar los espacios de la izquierda
-# # rstrip() para quitar los expacios de la dereche
-# s = s.strip() 
-# a = s.split(",") # El split nos crea una lista
-# print("X" + s + "X")
-# print(a)
-# print(type(a))
-# print(type(a[0]))
+# lstrip() para quitar los espacios de la izquierda
+# rstrip() para quitar los expacios de la dereche
+s = s.strip() 
+a = s.split(",") # El split nos crea una lista
+print("X" + s + "X")
+print(a)
+print(type(a))
+print(type(a[0]))
 
-# # b = []
-# # for i in a:
-# #     if not i.isnumeric():
-# #         b.append(i)
+# b = []
+# for i in a:
+#     if not i.isnumeric():
+#         b.append(i)
     
-# # LIST COMPREHENSION = Crear una nueva lista de una lista previa
-# b = [str(i) for i in a if not i.isnumeric()]
-# print(b)
-# texto_final = ""
-# for i in b:
-#     texto_final = texto_final + i + " "
-# texto_final = " ".join(str(i) for i in b)
-# print(texto_final)
-# print(texto_final.upper())
-# print(texto_final.lower())
-# print(texto_final.capitalize())
+# LIST COMPREHENSION = Crear una nueva lista de una lista previa
+b = [str(i) for i in a if not i.isnumeric()]
+print(b)
+texto_final = ""
+for i in b:
+    texto_final = texto_final + i + " "
+texto_final = " ".join(str(i) for i in b)
+print(texto_final)
+print(texto_final.upper())
+print(texto_final.lower())
+print(texto_final.capitalize())
 
 
 # i = "3"
@@ -167,6 +167,40 @@ for email in emails:
     if domine not in domines:
         domines.append(domine)
 print(domines)
+
+
+s = "    122,Python,es,64,un,777,lenguaje,222,de,55,66,programación  "
+
+# lstrip() para quitar los espacios de la izquierda
+# rstrip() para quitar los expacios de la dereche
+s = s.strip() 
+a = s.split(",") # El split nos crea una lista
+print("X" + s + "X")
+print(a)
+print(type(a))
+print(type(a[0]))
+
+# b = []
+# for i in a:
+#     if not i.isnumeric():
+#         b.append(i)
+    
+# LIST COMPREHENSION = Crear una nueva lista de una lista previa
+b = [str(i) for i in a if not i.isnumeric()]
+print(b)
+texto_final = ""
+for i in b:
+    texto_final = texto_final + i + " "
+texto_final = " ".join(str(i) for i in b)
+print(texto_final)
+print(texto_final.upper())
+print(texto_final.lower())
+print(texto_final.capitalize())
+
+nombres = ("maria", "jon", "david")
+# con los nombres, generar un texto en formato CSV con nuevos correos e.g maria@nazaret.eus,jon@nazaret.eus,david@nazaret.eus
+nombres = ",".join(nombre + "@aulanz.net" for nombre in nombres)
+print(nombres)
 
 
 
