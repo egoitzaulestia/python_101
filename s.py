@@ -26,6 +26,7 @@
 # print(texto_final.lower())
 # print(texto_final.capitalize())
 
+
 # i = "3"
 # print(i.isnumeric())
 
@@ -134,37 +135,74 @@
 # n_text = n_text.swapcase()
 
 
+
 # GESTIÓN DE LOS CORREOS ELECTRÓNICOS
 # Generar un informe con:
 # - los nombres de los usuarios
 # - los dominios únicos (sin repetir el dominio)
+
 emails = ["jon.smith@microsoft.com", "maria.fernandez@microsoft.com", "david@microsoft.com", "isabel@microsoft.es","alfonso@gmail.com"]
 
-nombres = []
-dominios = []
+names = []
+domines = []
+
+# for email in emails:
+#     name = email.split("@") 
+#     names.append(name[0])
+# print(names)
+
+## names = " ".join(name.replace(".", " ") for name in names) NO ESTA BIEN
+
+# for email in emails: 
+#     domine = email.split("@")
+#     if domine not in domines:
+#         domines.append(domine)
+# print(domines)
+# print(domines.count("microsoft.es"))
+
+for email in emails:
+    name, domine = email.split("@")
+    names.append(name)
+    print(name)
+    if domine not in domines:
+        domines.append(domine)
+print(domines)
+
+
+
+# names = [email.split("@") for email in emails]
+# names = [names.append(name[0]) for name in names]
+# print(names)
+
+# for n in name:
+#     names.append(n[0])
+# names = [names.append(n[0]) for n in name]
+# print(names)
+
+
+
+
 
 ### EJERCICIO DE MAILING ###
 #separa los nombres de los dominios
-""" emails = ["jon.smith@microsoft.com", "maria.fernandez@microsoft.com", "david@microsoft.com", "isabel@microsoft.es","alfonso@gmail.com"]
-nombres=""
-dominios=""
-for email in emails:
-    nombre,dominio=email.split("@")
-    if "." in nombre:
-        aux1=nombre.split(".")
-        nombre_completo=" ".join(i for i in aux1)
-    else:
-        nombre_completo=nombre
-    nombres=nombres+ "," + nombre_completo
-    if dominio not in dominios:
-       dominios=dominios + "," + dominio
-print(nombres)
-print(dominios)
+# emails = ["jon.smith@microsoft.com", "maria.fernandez@microsoft.com", "david@microsoft.com", "isabel@microsoft.es","alfonso@gmail.com"]
+# nombres=""
+# dominios=""
+# for email in emails:
+#     nombre,dominio=email.split("@")
+#     if "." in nombre:
+#         aux1=nombre.split(".")
+#         nombre_completo=" ".join(i for i in aux1)
+#     else:
+#         nombre_completo=nombre
+#     nombres=nombres+ "," + nombre_completo
+#     if dominio not in dominios:
+#        dominios=dominios + "," + dominio
+# print(nombres)
+# print(dominios)
 
-#devuelve un texto con nuevos correos
-nombres = ("maria", "jon", "david")
-texto=",".join(nombre+"@nazaret.eus" for nombre in nombres)
-print(texto) """
-        
-
-
+# ### EJERCICIO DE MAILING ###
+# #devuelve un texto con nuevos correos
+# nombres = ("maria", "jon", "david")
+# texto=",".join(nombre+"@nazaret.eus" for nombre in nombres)
+# print(texto) 
