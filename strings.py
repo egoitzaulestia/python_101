@@ -240,3 +240,5 @@ print(nombres)
 # nombres = ("maria", "jon", "david")
 # texto=",".join(nombre+"@nazaret.eus" for nombre in nombres)
 # print(texto) 
+
+
