@@ -29,7 +29,7 @@ print(platform.uname())
 
 print(os.getcwd())
 
-path = os.path.join(os.getcwd(), "carpeta")
+path = os.path.join(os.getcwd())
 print(path)
 
 print(os.path.split(os.getcwd()))
@@ -37,4 +37,13 @@ print(os.path.split(os.getcwd()))
 # Cambiar "abc" para un archivo en tu directorio working
 print(os.path.isfile(os.path.join(os.getcwd(), "oSys.py")))
 
-# Cambiar "carpeta"
+# Cambiar "carpeta" para una carpeta en tu directorio working
+print(os.path.isdir(os.path.join(os.getcwd(), "carpeta")))
+
+# cambiar "carpeta" para una carpate en tu directorio working
+print(os.path.exists(os.path.join(os.getcwd(), "neuro")))
+
+# print(os.listdir(path))
+
+# os.mkdir("neuro2")
+# print(os.listdir(path))
