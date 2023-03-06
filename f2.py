@@ -1,54 +1,42 @@
-# Crear la función calcular_cuenta en un restaurante con 2 parametros
-# Cuenta - lo que hay que pagar en total
-# Propina - por defecto 10%, pero es opcional (si el usuario pasa 12%, lo calcula con 12, si no, lo calcula con 10)
-# devolver el total de la cuenta para pagar (cuenta + propina)
-
-def calcular_cuenta(cuenta, propina = 10):
-    # totalPlus = cuenta * propina / 100
-    total = cuenta * (1 + 0.01 * propina)
-    total = round(total, 2)
-    return total
+# Clase perro
+class Perro:
+    def __init__(self, nombre, raza, altura):
+        self.nombre = nombre
+        self.raza   = raza
+        self.altura = altura
     
+    def comer(self):
+        print(f"{self.nombre} está comiendo.")
 
-def imprimirDiasSemana(*dias):
-    i = 1
-    for dia in dias:
-        print(f"{dia} es la {i} de la semana.")
-        i += 1
-    
+    def dormir(self):
+        print(f"{self.nombre} está durmiendo.")
 
-def get_usuario():
-    usuario = input("Introducir tu nombre de usuario")
+    def ladrar(self):
+        print(f"{self.nombre} dice: \"GUAU!-GUAU!\"")
 
+    def presentar(self):
+        print(f"{self.nombre} mide {self.altura} y su raza es {self.raza}")
 
-# Argumentos by value
-def ref_demo(x):
-    x = 42
-    print(x)
-
-# Argumentos by ref/ by objects (por referencia)
-def incrementar_ciudad(cities):
-    cities.append("Madrid")
-    
-
-
+# Este es el programa principal
 if __name__ == "__main__":
-    # men
-    # total = calcular_cuenta(100)
-    # print(f"Hay que pagar ${total}")
 
-    # total = calcular_cuenta(100, 15)
-    # print(f"Hay que pagar ${total}")
+    perros = []
+    
+    # archivado = input("¿Quieres crear la ficha de un perro nuevo? (Y/N)")
+    
+    # while archivado != "n":
+    #     nombre = input("Nombre de el perro: ")
+    #     raza = input("Raza del perro: ")
+    #     altura = input("Altura del perro: ")
+    
+    #     perro = Perro(nombre, raza, altura)
 
+    #     perros.append(perro)
 
-    imprimirDiasSemana("Lunes", "Martes", "Miércoles", "Jueves", "Viernes")
-    print("-" * 10)
-    imprimirDiasSemana("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo")
+    miles = Perro("Miles", "Jack Russell Terrier", 1.2)
+    buddy = Perro("Buddy", "Dachshund", 0.3)
+    jack = Perro("Jack", "Bulldog", 0.45)
+    jim = Perro("Jim", "Buldog", 0.3)
 
-
-    x = 100
-    ref_demo(x)
-
-    ciudades = ["Donostia", "bilbao"]
-    incrementar_ciudad(ciudades)
-    print(ciudades)
+    for perro in perros:
+        print(perro.nombre)
