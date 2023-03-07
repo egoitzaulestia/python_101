@@ -1,11 +1,11 @@
 # Creamos la clase vehículo
 class Vehiculo:
-    def __init__(self, marca, modelo, tipo, fuel_max):
+    def __init__(self, marca, modelo, tipo):
         self.marca             = marca
         self.modelo            = modelo
         self.tipo              = tipo
         self.fuel_max          = 10
-        self.fuel_nivel_actual = 1
+        self.fuel_nivel_actual = 1 ### Podría ser interesante poner este en privado " self.__fuel_nivel_actual "
         # self.__salario = 2000
         self.averiado          = False
 
@@ -24,6 +24,10 @@ class Vehiculo:
         else:
             print(f"El {self.marca} {self.modelo} está conduciendo.")
     
+    def turbo(self):
+        self.fuel_nivel_actual = self.fuel_nivel_actual - 5
+        print("WOOHOO! Qué rápido!!")
+
     def llenar_deposito(self):
         self.fuel_nivel_actual = self.fuel_max
         print(f"El deposito del {self.marca} {self.modelo}.")
@@ -43,12 +47,25 @@ class Vehiculo:
                 print(f"El nivel de tu batería es {self.fuel_nivel_actual} kw.")
             else:
                 print(f"El nivel de fuel es {self.fuel_nivel_actual} l.")
+    
+    def accidente(self, otro):
+        self.fuel_nivel_actual = self.fuel_nivel_actual - 5
+        otro.fuel_nivel_actual = otro.fuel_nivel_actual - 5
 
+    def actualizar_deposito(self, nivel):
+        if nivel <= self.fuel_max:
+            self.fuel_max = nivel
+        else:
+            if self.tipo.upper() == "electrico": 
+                print("Demasiada energia. Intentalo de nuevo.")
+            else:
+                print("Demasiada fuel. Intentalo de nuevo.")
 
-
+        
 # El programa se inicializa aquí
 if __name__ == "__main__":
-    tesla = Vehiculo("Tesla", "S", "Electrico", 10)
+    tesla = Vehiculo("Tesla", "S", "Electrico")
+    r8    = Vehiculo("Audi", "R8", "Gasolina")
     # print(tesla.fuel_max)
 
     # tesla.conducir()
@@ -58,3 +75,9 @@ if __name__ == "__main__":
     print(tesla.fuel_nivel_actual)
     tesla.llenar_deposito()
     tesla.conducir()
+    print(tesla.tipo)
+    tesla.accidente(r8)
+    print(tesla.fuel_nivel_actual)
+    print(r8.fuel_nivel_actual)
+
+
