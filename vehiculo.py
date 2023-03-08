@@ -1,13 +1,21 @@
 # Creamos la clase vehículo
 class Vehiculo:
-    def __init__(self, marca, modelo, tipo):
-        self.marca             = marca
-        self.modelo            = modelo
-        self.tipo              = tipo
-        self.fuel_max          = 10
-        self.fuel_nivel_actual = 1 ### Podría ser interesante poner este en privado " self.__fuel_nivel_actual "
+    def __init__(self, marca, modelo, tipo, ruedas, color, bastidor):
+        self.marca              = marca
+        self.modelo             = modelo
+        self.tipo               = tipo
+        self.fuel_max           = 10
+        self.fuel_nivel_actual  = 1 ### Podría ser interesante poner este en privado " self.__fuel_nivel_actual "
         # self.__salario = 2000
-        self.averiado          = False
+        self.averiado           = False
+        self.ruedas             = ruedas
+        self.estado_reudas      = 20
+        self.color              = color
+        self.__bastidor         = bastidor
+
+    def get_bastidor(self):
+        return self.__bastidor
+        
 
     # # @property
     # def getSalario(self):
@@ -61,11 +69,44 @@ class Vehiculo:
             else:
                 print("Demasiada fuel. Intentalo de nuevo.")
 
-        
+    def derrapar(self):
+        self.estado_reudas -= 5
+        print(f"{self.marca} {self.modelo} esta derrapando.")
+        if self.estado_reudas < 5:
+            print(f"Cuidado! {self.marca} {self.modelo} tiene las ruedas muy gastadas")
+    
+    def tocar_bocina(self):
+        print("PII-PIIII!")
+
+class Camion(Vehiculo):
+    def __init__(self, marca, modelo, tipo, ruedas, color, cabina):
+        super().__init__(marca, modelo, tipo, ruedas, color)
+        self.cabina = cabina
+
+    def dormir(self):
+        print("Hora de echar una cabezada.")
+    
+    def transportar_producto(self):
+        print("Hora de echar una cabezada.")
+
+
+class Moto(Vehiculo):
+    def __init__(self, marca, modelo, tipo, ruedas, color, cadena, manillar):
+        super().__init__(marca, modelo, tipo, ruedas, color)
+        self.cadena = True
+        self.manillar = manillar
+    
+    def caballito(self):
+        print(f"{self.marca} {self.modelo} esta haciendo un cabillito.")
+
+    def pinito(self):
+        print(f"{self.marca} {self.modelo} esta haciendo un pinito.")
+
+
 # El programa se inicializa aquí
 if __name__ == "__main__":
-    tesla = Vehiculo("Tesla", "S", "Electrico")
-    r8    = Vehiculo("Audi", "R8", "Gasolina")
+    tesla = Vehiculo("Tesla", "S", "Electrico", 4, "negro", "987014NME")
+    r8    = Vehiculo("Audi", "R8", "Gasolina", 4, "Azul", "978233KSL")
     # print(tesla.fuel_max)
 
     # tesla.conducir()
@@ -74,10 +115,15 @@ if __name__ == "__main__":
     # # tesla.llenar_deposito()
     print(tesla.fuel_nivel_actual)
     tesla.llenar_deposito()
-    tesla.conducir()
-    print(tesla.tipo)
-    tesla.accidente(r8)
-    print(tesla.fuel_nivel_actual)
-    print(r8.fuel_nivel_actual)
-
-
+    
+    for i in range(5):
+        tesla.conducir()
+    # print(tesla.tipo)
+    # tesla.accidente(r8)
+    # print(tesla.fuel_nivel_actual)
+    # print(r8.fuel_nivel_actual)
+    print(tesla.estado_reudas)
+    tesla.derrapar()
+    print(tesla.estado_reudas)
+    # print(tesla.get_bastidor())
+    # honda_cbr = Moto()
