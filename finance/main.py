@@ -5,8 +5,21 @@ class Empleado:
         self.exp        = exp
         self.pais       = pais
         self.ciudad     = ciudad
+        self.__salario  = 2000
+        if self.exp >= 2:
+            self.__salario += 200
+        elif self.exp >= 5:
+            self.__salario += 500
+        elif self.exp >= 10:
+            self.__salario += 1000
+        self.__sueldo = self.__salario
+
+
 
     def calcular_salario():
+        pass
+
+    def get_salario():
         pass
 
     
@@ -14,6 +27,16 @@ class Programador(Empleado):
     def __init__(self, nombre, apellido, exp, pais, ciudad, lenguaje_de_programacion):
         super().__init__(nombre, apellido, exp, pais, ciudad)
         self.lenguaje_de_programacion = lenguaje_de_programacion
+        self.__salario_bonus = 0
+        if self.lenguaje_de_programacion == "HTML":
+            self.__salario_bonus += 100
+        elif self.lenguaje_de_programacion == "Python":
+            self.__salario_bonus += 400
+        elif self.lenguaje_de_programacion == "Java":
+            self.__salario_bonus += 850
+        elif self.lenguaje_de_programacion == "Assembbly":
+            self.__salario_bonus += 1300
+        self.__sueldo = self.__salario_bonus
     
     def __info(self):
         pass
@@ -21,6 +44,9 @@ class Programador(Empleado):
 
     def get_info(self):
         return self.__info()
+
+    def get_salario(self):
+        print(f"Sueldo: {self.__sueldo}")
 
 class Sistema_Nominas:
 
@@ -61,4 +87,5 @@ if __name__ == "__main__":
     empleados.append(steve)
 
     for empleado in empleados:
-        empleado.get_info()
+        empleado.get_salario()
+    elliot.get_salario()
