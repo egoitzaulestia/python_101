@@ -47,6 +47,10 @@ class Programador(Empleado):
 
     def get_salario(self):
         print(f"Sueldo: {self.__sueldo}")
+        
+# class Scrum MAster(Empleado):
+    # def __inint__(self, nombre, apellido, exp, pais, ciudad, lenguaje_de_programacion): 
+        
 
 class Sistema_Nominas:
     # def __init__(self, nombre, apellido, exp, pais, ciudad, lenguaje_de_programacion):
