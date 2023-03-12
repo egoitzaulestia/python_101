@@ -7,6 +7,8 @@ Notas escritas a mano por la antigua programadora:
   - (Hay que desarrollar más el método de cálculo = hablar con analistas)
   - Quizás otros tipos de empleados (Analista, Scrum Master, Product Owner)
  
+ ---
+ 
  Requisitos de entregar del RETO:
   1. Diagrama UML de las clases
   2. Breve descripción del proyecto (unas líneas dentro del código)
