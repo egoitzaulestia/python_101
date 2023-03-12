@@ -1,95 +1,59 @@
-class Empleado:
-    def __init__(self, nombre, apellido, exp, pais, ciudad):
-        self.nombre     = nombre
-        self.apellido   = apellido
-        self.exp        = exp
-        self.pais       = pais
-        self.ciudad     = ciudad
-        self._salario  = 2000
-        if self.exp >= 2:
-            self._salario += 200
-        elif self.exp >= 5:
-            self._salario += 500
-        elif self.exp >= 10:
-            self._salario += 1000
-        # self.__sueldo = self._salario # A revisar
+"""
+# RETO: Sistema para calcular las nóminas.
 
-    def calcular_salario(self):
-        return self._salario
+Acaba de irse de la empresa la programadora que se encargaba del desarrollo del proyecto de nóminas.
+Ella ya ha creado una clase Sistema_Nominas, y ha hecho los primeros diseños para las clases de Empleados.
+Usando su trabajo ya hecho, termina el programa.
 
-    def get_salario(self):
-        return self._salario
+La antigua programadora dejo las siguientes notas escritas a mano:
 
-    
-class Programador(Empleado):
-    def __init__(self, nombre, apellido, exp, pais, ciudad, lenguaje_de_programacion):
-        super().__init__(nombre, apellido, exp, pais, ciudad)
-        self.lenguaje_de_programacion = lenguaje_de_programacion
-        self.__salario_bonus = 0
-        if self.lenguaje_de_programacion == "HTML":
-            self.__salario_bonus += 100
-        elif self.lenguaje_de_programacion == "Python":
-            self.__salario_bonus += 400
-        elif self.lenguaje_de_programacion == "Java":
-            self.__salario_bonus += 850
-        elif self.lenguaje_de_programacion == "Assembbly":
-            self.__salario_bonus += 1300
-        self.__sueldo = self.__salario_bonus
-    
-    def calcular_salario(self):
-        return self.__salario_bonus + self._salario
+    - Creo seria conveniente crear clases para: 
+      Empledo (atributos: nombre salario; métodos: calcular_salario(salario * 1.1)
+      (Hay que desarrollar más el método de cálculo = hablar con analistas)
+    - Quizás otros tipos de empleados:
+      (Analista, Scrum Master, Product Owner)
+"""
 
-    def __info(self):
-        print(f"Nombre: {self.nombre}; Apellido: {self.apellido}; Exp: {self.exp}; Pais: {self.pais}; Ciudad: {self.ciudad}; Lenguaje de Progrmación: {self.lenguaje_de_programacion}")
-
-    def get_info(self):
-        return self.__info()
-
-    def get_salario(self):
-        print(f"Sueldo: {self.__sueldo}")
-        
-# class Scrum MAster(Empleado):
-    # def __inint__(self, nombre, apellido, exp, pais, ciudad, lenguaje_de_programacion): 
-        
-
-class Sistema_Nominas:
-    # def __init__(self, nombre, apellido, exp, pais, ciudad, lenguaje_de_programacion):
-    #     super().__init__(nombre, apellido, exp, pais, ciudad, lenguaje_de_programacion)
-    # parámetro - una lista de clase Empleado
-    def calcular_nominas(self, empleados):
-        print("Calculando nominas")
-        print("==================")
-        for empleado in empleados:
-            print(f"Nomina para : {empleado.nombre} - {empleado.lenguaje_de_programacion}")
-            print(f"- $ : {empleado.calcular_salario()}")
+# Importamos las clases: Empleado, Programador, Analista, Scrum_Master, Product_Owner, Sistema_Nominas
+from modules.empleado import *
+from modules.programador import *
+from modules.analista import *
+from modules.scrum_master import *
+from modules.product_owner import *
+from modules.sistema_nominas import *
 
 
-
+# Entrada principal - Comienzo del programa
 if __name__ == "__main__":
     
+    # Creamos una lista vacia llamada "empleados"
     empleados = []
     
-    # Ejecutar el método para calcular los salarios
-    nominas = Sistema_Nominas()
-        
-    # rellenar la lista de empleados con datos de diferentes tipos de empleados
-
-    elliot = Programador("Elliot", "Alderson", 5, "EEUU", "NYC", "Python")
-    # elliot.get_info()
+    # Creamos objetos de la clase Programador
+    elliot = Programador("Elliot", "Alderson", 5, "US", "NYC", "Python")
     naira = Programador("Naira", "Guirado", 0, "Euskadi", "Donostia", "Java")
-    steve = Programador("Steve", "Wozniak", 8, "EEUU", "San José", "Assembly")
-    empleados.append(elliot
-                     )
+    steve = Programador("Steve", "Wozniak", 8, "US", "San José", "Assembly")
+    # Creamos objeto de la clase Scrum Master
+    ego = Scrum_Master("Egoitz", "Aulestia", 0, "Euskadi", "Donostia")
+    # Creamos objeto de la clase Analista
+    che = Analista("Abu", "Haldul", 4, "India", "Bangalore")
+    # Creamos objeto de la clase Product_Owner
+    andrew = Product_Owner("Andrew", "NG", 18, "UK", "London")
+        
+    # añadimos a la lista de empleados diferentes tipos de empleados
+    empleados.append(elliot)
     empleados.append(naira)
     empleados.append(steve)
+    empleados.append(ego)
+    empleados.append(che)
+    empleados.append(andrew)
+
+    # Ceamos objeto de la clase de Sistema Nominas
+    nominas = Sistema_Nominas()
+      
+    # Ejecutamos el método para calcular los salarios
     nominas.calcular_nominas(empleados)
 
-    print()
-    for empleado in empleados:
-        empleado.get_salario()
-    elliot.get_salario()
-    print(elliot.calcular_salario())
-    print(naira.calcular_salario())
-    print(steve.calcular_salario())
-
-    # empleados.calcular_nominas()
+    # Obtenemos información de empleado
+    ego.get_info()
+    naira.get_info()
