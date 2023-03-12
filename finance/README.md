@@ -9,7 +9,7 @@ Notas escritas a mano por la antigua programadora:
  
  ---
  
- Requisitos de entregar del RETO:
+ Requisitos de entrega del RETO:
   1. Diagrama UML de las clases
   2. Breve descripción del proyecto (unas líneas dentro del código)
   3. Código (a través de GitHub)
