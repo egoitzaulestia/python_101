@@ -5,14 +5,15 @@ app = Flask(__name__)
 
 
 class Empleado:
-    def __init__(self, nombre, apellido):
+    def __init__(self, nombre, apellido, edad):
         self.nombre   = nombre
         self.apellido = apellido
+        self.edad     = edad
 
 
 @app.route("/")
 def hola():
-    jon = Empleado("Jon", "Smith")
+    jon = Empleado("Jon", "Smith", 43)
     # nombre = "Jon"
     # apellido = "Smith"
     # return render_template("index.html", name = nombre, lastname = apellido)
