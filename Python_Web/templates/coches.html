@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        h1 {text-align: center;}
+        h1 {
+            font-size: 4em; /* 40px/16=2.5em */
+            text-align: center;}
+        h2 {text-align: center;}
         h3 {text-align: center;}
     </style>
 </head>
 <body>
-    <h1>Oferta de segunda mano</h1>
+    <h1>C A R M A Z O N</h1>
+    <h2>Oferta de segunda mano</h2>
     <h3>Encuentra ahora coches de particulares y concesionarios</h3>
     <table>
         <tr>
@@ -25,12 +29,12 @@
         {% for coche in coches %}
             <tr>
                 <td>{{coche.id}}</td>
+                <td><a href="/coche/{{coche.id}}"><img src="/static/images/{{coche.image}}" width="120" height = "auto"/></a></td>
                 <td>{{coche.marca}}</td>
                 <td>{{coche.modelo}}</td>
                 <td>{{coche.features}}</td>
                 <td>{{coche.precioContado}}</td>
                 <td>{{coche.precioFinanciado}}</td>
-
             </tr>
         {% endfor %}
     </table>
