@@ -16,19 +16,19 @@ class Coche:
         self.image            = image
 
 
-coche1 = Coche(1,"PEUGEOT", "308", "308 1.2 pUREtECH S&S Alture Pack 102kW", 22900, 19913, "coche1.jpg")
-coche2 = Coche(2, "AUDI", "A5", "A5 Sportback 2.0 TFSI 140kW", 25900, 23900, "coche2.jpg")
-coche3 = Coche(3, "RENAULT", "Mégane", "Mégane 1.5dCi Energy Intens 66kW", 12300, "", "coche3.jpg")
+coche1 = Coche(1,"PEUGEOT", "308", "308 1.2 pUREtECH S&S Alture Pack 102kW", 22900, 19913, "coche1b.jpg")
+coche2 = Coche(2, "AUDI", "A5", "A5 Sportback 2.0 TFSI 140kW", 25900, 23900, "coche2b.jpg")
+coche3 = Coche(3, "RENAULT", "Megane", "Megane 1.5dCi Energy Intens 66kW", 12300, "", "coche3b.jpg")
 
 coches.append(coche1)
 coches.append(coche2)
 coches.append(coche3)
 
-coche4 = Coche(4,"PEUGEOT", "308", "308 1.2 pUREtECH S&S Alture Pack 102kW", 22900, 19913, "coche1b.jpg")
+coche4 = Coche(4,"TESLA", "S", "Tesla S 233kW", 42500, 39000, "coche4b.png")
 coche5 = Coche(5, "AUDI", "A5", "A5 Sportback 2.0 TFSI 140kW", 25900, 23900, "coche2b.jpg")
-coche6 = Coche(6, "RENAULT", "Mégane", "Mégane 1.5dCi Energy Intens 66kW", 12300, "", "coche3b.jpg")
+coche6 = Coche(6, "RENAULT", "Megane", "Megane 1.5dCi Energy Intens 66kW", 12300, "", "coche3b.jpg")
 
-coches2.append(coche4)
+coches.append(coche4)
 coches2.append(coche5)
 coches2.append(coche6)
 
@@ -52,18 +52,28 @@ def aboutus():
 def cars():
     return render_template("coches.html", coches = coches, coches2 = coches2)
     
-@app.route("/coches/<int:id>")
-def dicamica(id):
-    if id == 1:
-        return render_template("coche1.html")
-    elif id == 2:
-        return render_template("coche2.html")
-    elif id == 3:
-        return render_template("coche3.html")
-    else:
-        # return redirect("/index")
-        return redirect(url_for("hola")) # El nombre debe ser la misma que la definición de la ruta a la que nos dirigimas
+
+# @app.route("/coches")
+# def car():
+#     return render_template("coches.html", coches = coches, coches2 = coches2)
+
+
+@app.route("/coche/<int:id>")
+def dicamica(id): # la función tiene un parametro
+    # buscar el objeto id == en la lista
+    for coche in coches:
+        if coche.id == id:
+            return render_template("coche.html", coches = coche)
+        # elif c.id == 2:
+        #     return render_template("coche.html", coches = c)
+        # elif c.id == 3:
+        #     return render_template("coche.html", coches = c)
+        # else:
+        #     # return redirect("/index")
+        #     return redirect(url_for("hola")) # El nombre debe ser la misma que la definición de la ruta a la que nos dirigimas
     
+
+
 
 if __name__ == "__main__":
 
