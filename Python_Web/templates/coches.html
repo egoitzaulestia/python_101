@@ -6,14 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
         h1 {
             font-size: 4em; /* 40px/16=2.5em */
             text-align: center;}
         h2 {text-align: center;}
         h3 {text-align: center;}
+
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+        }
+
+        li {
+          float: left;
+        }
+
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+
+        li a:hover {
+          background-color: #111;
+        }
     </style>
 </head>
 <body>
+    <ul>
+      <li><a class="active" href="/">Home</a></li>
+      <li><a href="/coches">Coches</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
     <h1>C A R M A Z O N</h1>
     <h2>Oferta de segunda mano</h2>
     <h3>Encuentra ahora coches de particulares y concesionarios</h3>
