@@ -62,3 +62,15 @@ FROM scott.emp
 		WHERE LOC = 'NEW YORK' AND sal > 2000 
     		ORDER BY sal DESC 
 				LIMIT 10
+
+
+
+-- Para Crear una Tabla
+create table usuarios (
+    ID number not null constraint usuarios_pk primary key,
+    Nombre varchar2(50) not null,
+    Email varchar2(255)
+);
+/
+
+alter table usuarios add constraint usuarios_id_uq unique (ID); -- Restricciones
