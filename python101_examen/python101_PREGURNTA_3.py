@@ -1,5 +1,5 @@
 # Examen Python101
-# PREGUNTA_2
+# PREGUNTA_3
 # ————————————————————————————————————————————————————————————————————
 
 # Teniendo un rectángulo de 10 metros de base y 3 metros de altura, crear una función para calcular su área.
