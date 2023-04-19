@@ -1,6 +1,7 @@
 # Examen Python101
 # PREGUNTA_2
 # ————————————————————————————————————————————————————————————————————
+
 # Crear un programa para:
 # - Imprimir los valores de la siguiente lista, excluyendo los valores en negativo. (2)
 # - Al imprimir, imprimes "Hola numero 6" si el valor es 6. (1)
